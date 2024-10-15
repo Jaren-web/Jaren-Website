@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Text that changes at the top of the page
     const textArray = [
-        "Join the Boss Fighting Community!",
-        "Become a Boss Slayer!",
-        "Conquer the Minecraft Bosses!",
-        "Experience Epic Boss Battles!"
+        "Build Your Best Server!",
+        "Get help with Jaren!",
+        "Let us help you grow!",
+        "You deserve us!"
     ];
     let currentIndex = 0;
 
