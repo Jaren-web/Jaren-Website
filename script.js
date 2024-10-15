@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             changingTextElement.textContent = textArray[currentIndex];
             changingTextElement.style.opacity = '1';
             changingTextElement.style.transform = 'translateY(0)';
-        }, 500);
+        }, 1000);
     }
 
     changeText();
