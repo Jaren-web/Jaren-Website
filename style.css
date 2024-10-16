@@ -76,32 +76,55 @@ body {
   50% { transform: scale(1.05); }
 }
 
-.navigation {
-position: fixed;
-height: 70px;
-right: 0;
-left: 0;
-background-color: navy;
-box-sizing: border-box;
--webkit-box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
--moz-box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
-box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
-
+.navbar{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+background-color: #fff;
+padding: 15px;
 }
 
-.navigation h1 {
-position: fixed;
-top: 0;
-left: 0;
-margin: 15px;
-font-family: Arial;
-color: #FFAA01;
-background-image: -webkit-linear-gradient( Odeg, #4d40ff 0%, #466e85 46%, #ff0055 86%);                              
-background-clip: text;
--webkit-background-clip: text;
-text-emphasis-color: transparent;
--webkit-text-fill-color: transparent;
+.navbar a{
+text-decoration: none;
+color: inherit;
+}
 
+.logo{
+margin-right: 50px;
+}
+
+.list{
+list-style: none;
+display: flex;
+gap: 25px;
+}
+
+#toggler,
+.navbar label{
+display: none;
+}
+
+@media screen and 
+(max-width: 600px){
+.menu{
+width: 100%;
+max-height: 0;
+overflow: hidden;
+}
+.list{
+flex-direction: column;
+align-items: center;
+padding: 20px;
+}
+.navbar label{
+display: inline-flex;
+align-items: center;
+cursor: pointer;
+}
+#toggler:checked ~ .menu{
+max-height: 100%;
+   }
 }
 
 .button-container {
