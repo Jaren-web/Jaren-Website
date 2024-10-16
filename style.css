@@ -196,7 +196,7 @@ max-height: 100%;
 .content-section {
   background-color: rgba(74, 143, 28, 0.1);
   border: 2px solid var(--primary);
-  border-radius: 8px;
+  border-radius: 20px;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 4px 6px var(--shadow);
