@@ -76,6 +76,37 @@ body {
   50% { transform: scale(1.05); }
 }
 
+.navigation {
+position: fixed;
+height: 70px;
+right: 0;
+left: 0;
+background-color: navy;
+box-sizing: border-box;
+-webkit-box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
+-moz-box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
+box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
+
+}
+
+.navigation h1 {
+position: fixed;
+top: 0;
+left: 0;
+margin: 15px;
+font-family: Arial;
+color: #1100ff;
+background-image: -webkit-linear-gradient( Odeg, #4d40ff 0%, #466e85 46%, #ff0055 86%
+
+);
+
+background-clip: text;
+-webkit-background-clip: text;
+text-emphasis-color: transparent;
+-webkit-text-fill-color: transparent;
+
+} 
+
 /* Sidebar styles */
 .sidebar {
   width: 250px;
