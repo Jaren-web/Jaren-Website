@@ -23,30 +23,40 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     let currentIndex = 0;
 
-    menuToggle.addEventListener('click', function() {
-        sidebar.classList.toggle('active');
-    });
-
-    sidebarLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            sidebar.classList.remove('active');
-        });
-    });
-
-    function changeText() {
-        changingTextElement.style.opacity = '0';
-        changingTextElement.style.transform = 'translateY(1rem)';
-        
-        setTimeout(() => {
-            currentIndex = (currentIndex + 1) % textArray.length;
-            changingTextElement.textContent = textArray[currentIndex];
-            changingTextElement.style.opacity = '1';
-            changingTextElement.style.transform = 'translateY(0)';
-        }, 1000);
+    function typeText(text, index = 0) {
+        if (index < text.length) {
+            setTimeout(() => {
+                const span = document.createElement('span');
+                if (text[index] === ' ') {
+                    span.innerHTML = '&nbsp;';
+                } else {
+                    span.textContent = text[index];
+                }
+                if (changingTextElement) {
+                    changingTextElement.appendChild(span);
+                    setTimeout(() => {
+                        span.style.opacity = '1';
+                        span.style.transform = 'translateY(0)';
+                    }, 50);
+                }
+                typeText(text, index + 1);
+            }, 100);
+        } else {
+            setTimeout(changeText, 3000); // Wait for 3 seconds before changing text
+        }
     }
 
-    changeText();
-    setInterval(changeText, 5000);
+    function changeText() {
+        if (changingTextElement) {
+            changingTextElement.innerHTML = ''; // Clear previous text
+            currentIndex = (currentIndex + 1) % textArray.length;
+            typeText(textArray[currentIndex]);
+        }
+    }
+
+    if (changingTextElement) {
+        typeText(textArray[0]); // Start the animation with the first text
+    }
 
     // Admin Login (accepts any password)
     loginButton.addEventListener('click', function() {
