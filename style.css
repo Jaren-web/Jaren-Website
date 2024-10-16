@@ -96,9 +96,7 @@ left: 0;
 margin: 15px;
 font-family: Arial;
 color: #FFAA01;
-background-image: -webkit-linear-gradient( Odeg, #4d40ff 0%, #466e85 46%, #ff0055 86%
-);
-                                          
+background-image: -webkit-linear-gradient( Odeg, #4d40ff 0%, #466e85 46%, #ff0055 86%);                              
 background-clip: text;
 -webkit-background-clip: text;
 text-emphasis-color: transparent;
