@@ -99,13 +99,16 @@ color: #1100ff;
 background-image: -webkit-linear-gradient( Odeg, #4d40ff 0%, #466e85 46%, #ff0055 86%
 
 );
-
+                                          
 background-clip: text;
 -webkit-background-clip: text;
 text-emphasis-color: transparent;
 -webkit-text-fill-color: transparent;
 
-} 
+.button-container {
+    display: flex; /* This makes the buttons line up horizontally */
+    gap: 10px; /* Optional: Adds space between buttons */
+}
 
 /* Sidebar styles */
 .sidebar {
